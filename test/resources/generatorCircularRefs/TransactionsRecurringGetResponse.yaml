@@ -1,0 +1,26 @@
+title: TransactionsRecurringGetResponse
+required:
+  - inflow_streams
+  - outflow_streams
+  - request_id
+type: object
+properties:
+  inflow_streams:
+    type: array
+    description: An array of depository transaction streams.
+    items:
+      $ref: ./TransactionStream.yaml
+  outflow_streams:
+    type: array
+    description: An array of expense transaction streams.
+    items:
+      $ref: ./TransactionStream.yaml
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: >-
+  TransactionsRecurringGetResponse defines the response schema for
+  `/transactions/recurring/get`

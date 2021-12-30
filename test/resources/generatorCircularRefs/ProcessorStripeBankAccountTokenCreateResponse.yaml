@@ -1,0 +1,18 @@
+title: ProcessorStripeBankAccountTokenCreateResponse
+required:
+  - request_id
+  - stripe_bank_account_token
+type: object
+properties:
+  stripe_bank_account_token:
+    type: string
+    description: A token that can be sent to Stripe for use in making API calls to Plaid
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: >-
+  ProcessorStripeBankAccountTokenCreateResponse defines the response schema for
+  `/processor/stripe/bank_account/create`

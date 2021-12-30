@@ -1,0 +1,18 @@
+title: PhoneNumber
+required:
+  - data
+  - primary
+  - type
+type: object
+properties:
+  data:
+    type: string
+    description: The phone number.
+  primary:
+    type: boolean
+    description: >-
+      When `true`, identifies the phone number as the primary number on an
+      account.
+  type:
+    $ref: ./Type.yaml
+description: A phone number

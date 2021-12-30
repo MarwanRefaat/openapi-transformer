@@ -1,0 +1,50 @@
+title: Owner
+required:
+  - addresses
+  - emails
+  - names
+  - phone_numbers
+type: object
+properties:
+  names:
+    type: array
+    description: >-
+      A list of names associated with the account by the financial institution.
+      These should always be the names of individuals, even for business
+      accounts. If the name of a business is reported, please contact Plaid
+      Support. In the case of a joint account, Plaid will make a best effort to
+      report the names of all account holders.
+
+
+      If an Item contains multiple accounts with different owner names, some
+      institutions will report all names associated with the Item in each
+      account's `names` array.
+    items:
+      type: string
+  phone_numbers:
+    type: array
+    description: >-
+      A list of phone numbers associated with the account by the financial
+      institution. May be an empty array if no relevant information is returned
+      from the financial institution.
+    items:
+      $ref: ./PhoneNumber.yaml
+  emails:
+    type: array
+    description: >-
+      A list of email addresses associated with the account by the financial
+      institution. May be an empty array if no relevant information is returned
+      from the financial institution.
+    items:
+      $ref: ./Email.yaml
+  addresses:
+    type: array
+    description: >-
+      Data about the various addresses associated with the account by the
+      financial institution. May be an empty array if no relevant information is
+      returned from the financial institution.
+    items:
+      $ref: ./Address.yaml
+description: >-
+  Data returned from the financial institution about the owner or owners of an
+  account. Only the `names` array must be non-empty.

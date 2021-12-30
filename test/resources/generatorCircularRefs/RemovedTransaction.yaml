@@ -1,0 +1,7 @@
+title: RemovedTransaction
+type: object
+properties:
+  transaction_id:
+    type: string
+    description: The ID of the removed transaction.
+description: A representation of a removed transaction

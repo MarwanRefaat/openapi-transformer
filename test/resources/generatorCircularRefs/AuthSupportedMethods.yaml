@@ -1,0 +1,17 @@
+title: AuthSupportedMethods
+required:
+  - automated_micro_deposits
+  - instant_auth
+  - instant_match
+type: object
+properties:
+  instant_auth:
+    type: boolean
+    description: Indicates if instant auth is supported.
+  instant_match:
+    type: boolean
+    description: Indicates if instant match is supported.
+  automated_micro_deposits:
+    type: boolean
+    description: Indicates if automated microdeposits are supported.
+description: Metadata specifically related to which auth methods an institution supports.

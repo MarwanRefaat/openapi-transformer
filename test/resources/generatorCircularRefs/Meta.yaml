@@ -1,0 +1,17 @@
+title: Meta
+required:
+  - limit
+  - name
+  - official_name
+type: object
+properties:
+  name:
+    type: string
+    description: The account's name
+  official_name:
+    type: string
+    description: The account's official name
+  limit:
+    type: number
+    description: The account's limit
+description: Allows specifying the metadata of the test account

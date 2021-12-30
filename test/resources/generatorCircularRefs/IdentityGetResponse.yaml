@@ -1,0 +1,21 @@
+title: IdentityGetResponse
+required:
+  - accounts
+  - item
+  - request_id
+type: object
+properties:
+  accounts:
+    type: array
+    description: The accounts for which Identity data has been requested
+    items:
+      $ref: ./AccountIdentity.yaml
+  item:
+    $ref: ./Item.yaml
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: IdentityGetResponse defines the response schema for `/identity/get`

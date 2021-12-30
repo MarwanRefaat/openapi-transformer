@@ -1,0 +1,8 @@
+title: SignalEvaluateScores
+type: object
+properties:
+  customer_initiated_return_risk:
+    $ref: ./CustomerInitiatedReturnRisk.yaml
+  bank_initiated_return_risk:
+    $ref: ./BankInitiatedReturnRisk.yaml
+description: Risk scoring details broken down by risk category.

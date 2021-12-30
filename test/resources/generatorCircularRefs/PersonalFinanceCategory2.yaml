@@ -1,0 +1,14 @@
+title: PersonalFinanceCategory2
+required:
+  - detailed
+  - primary
+type: object
+properties:
+  primary:
+    type: string
+    description: >-
+      A high level category that communicates the broad category of the
+      transaction.
+  detailed:
+    type: string
+    description: Provides additional granularity to the primary categorization.

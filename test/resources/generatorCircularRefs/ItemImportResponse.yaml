@@ -1,0 +1,16 @@
+title: ItemImportResponse
+required:
+  - access_token
+  - request_id
+type: object
+properties:
+  access_token:
+    type: string
+    description: The access token associated with the Item data is being requested for.
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: ItemImportResponse defines the response schema for `/item/import`

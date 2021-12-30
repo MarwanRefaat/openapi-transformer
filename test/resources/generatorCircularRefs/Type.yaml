@@ -1,0 +1,10 @@
+title: Type
+type: string
+description: The type of phone number.
+enum:
+  - home
+  - work
+  - office
+  - mobile
+  - mobile1
+  - other

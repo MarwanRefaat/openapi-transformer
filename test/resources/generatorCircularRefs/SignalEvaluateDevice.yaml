@@ -1,0 +1,10 @@
+title: SignalEvaluateDevice
+type: object
+properties:
+  ip_address:
+    description: The IP address of the device that initiated the transaction
+  user_agent:
+    description: >-
+      The user agent of the device that initiated the transaction (e.g.
+      "Mozilla/5.0")
+description: Details about the end user's device

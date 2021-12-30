@@ -1,0 +1,57 @@
+title: TransactionStream
+required:
+  - account_id
+  - average_amount
+  - category
+  - category_id
+  - description
+  - first_date
+  - frequency
+  - is_active
+  - last_date
+  - stream_id
+  - transaction_ids
+type: object
+properties:
+  account_id:
+    type: string
+    description: The ID of the account to which the stream belongs
+  stream_id:
+    type: string
+    description: A unique id for the stream
+  category_id:
+    type: string
+    description: >-
+      The ID of the category to which this transaction belongs. See
+      [Categories](https://plaid.com/docs/#category-overview).
+  category:
+    type: array
+    description: >-
+      A hierarchical array of the categories to which this transaction belongs.
+      See [Categories](https://plaid.com/docs/#category-overview).
+    items:
+      type: string
+  description:
+    type: string
+    description: A description of the transaction stream.
+  first_date:
+    type: string
+    description: The posted date of the earliest transaction in the stream.
+  last_date:
+    type: string
+    description: The posted date of the latest transaction in the stream.
+  frequency:
+    $ref: ./RecurringTransactionFrequency.yaml
+  transaction_ids:
+    type: array
+    description: >-
+      An array of Plaid transaction IDs belonging to the stream, sorted by
+      posted date.
+    items:
+      type: string
+  average_amount:
+    $ref: ./TransactionStreamAmount.yaml
+  is_active:
+    type: boolean
+    description: indicates whether the transaction stream is still live.
+description: A grouping of related transactions

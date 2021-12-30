@@ -1,0 +1,59 @@
+title: SignalEvaluateRequest
+required:
+  - access_token
+  - account_id
+  - amount
+  - client_transaction_id
+type: object
+properties:
+  client_id:
+    type: string
+    description: >-
+      Your Plaid API `client_id`. The `client_id` is required and may be
+      provided either in the `PLAID-CLIENT-ID` header or as part of a request
+      body.
+    default: 5fd43aad1186c30013d6f3e2
+  secret:
+    type: string
+    description: >-
+      Your Plaid API `secret`. The `secret` is required and may be provided
+      either in the `PLAID-SECRET` header or as part of a request body.
+  access_token:
+    type: string
+    description: The access token associated with the Item data is being requested for.
+  account_id:
+    type: string
+    description: >-
+      The `account_id` of the account whose verification status is to be
+      modified
+  client_transaction_id:
+    maxLength: 36
+    minLength: 1
+    type: string
+    description: >-
+      The unique ID that you would like to use to refer to this transaction. For
+      your convenience mapping your internal data, you could use your internal
+      ID/identifier for this transaction. The max length for this field is 36
+      characters.
+  amount:
+    type: number
+    description: The transaction amount, in USD (e.g. `102.05`)
+  user_present:
+    description: >-
+      `true` if the end user is present while initiating the ACH transfer and
+      the endpoint is being called; `false` otherwise (for example, when the ACH
+      transfer is scheduled and the end user is not present, or you call this
+      endpoint after the ACH transfer but before submitting the Nacha file for
+      ACH processing).
+  client_user_id:
+    maxLength: 36
+    type: string
+    description: >-
+      A unique ID that identifies the end user in your system. This ID is used
+      to correlate requests by a user with multiple Items. The max length for
+      this field is 36 characters.
+  user:
+    $ref: ./SignalUser.yaml
+  device:
+    $ref: ./SignalEvaluateDevice.yaml
+description: SignalEvaluateRequest defines the request schema for `/signal/evaluate`

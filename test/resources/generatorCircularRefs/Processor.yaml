@@ -1,0 +1,26 @@
+title: Processor
+type: string
+description: The processor you are integrating with.
+enum:
+  - achq
+  - alpaca
+  - astra
+  - check
+  - checkbook
+  - circle
+  - drivewealth
+  - dwolla
+  - galileo
+  - lithic
+  - modern_treasury
+  - moov
+  - ocrolus
+  - prime_trust
+  - rize
+  - sila_money
+  - svb_api
+  - treasury_prime
+  - unit
+  - vesta
+  - vopay
+  - wyre

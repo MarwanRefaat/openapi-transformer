@@ -1,0 +1,12 @@
+title: ProductStatus
+required:
+  - breakdown
+type: object
+properties:
+  breakdown:
+    $ref: ./StatusBreakdown.yaml
+description: >-
+  A representation of the status health of a request type. Auth requests,
+  Balance requests, Identity requests, Investments requests, Liabilities
+  requests, Transactions updates, Investments updates, Liabilities updates, and
+  Item logins each have their own status object.

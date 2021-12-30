@@ -1,0 +1,27 @@
+title: HealthIncident
+required:
+  - incident_updates
+  - start_date
+  - title
+type: object
+properties:
+  start_date:
+    type: string
+    description: >-
+      The start date of the incident, in [ISO
+      8601](https://wikipedia.org/wiki/ISO_8601) format, e.g.
+      `"2020-10-30T15:26:48Z"`.
+  end_date:
+    type: string
+    description: >-
+      The end date of the incident, in [ISO
+      8601](https://wikipedia.org/wiki/ISO_8601) format, e.g.
+      `"2020-10-30T15:26:48Z"`.
+  title:
+    type: string
+    description: The title of the incident
+  incident_updates:
+    type: array
+    description: Updates on the health incident.
+    items:
+      $ref: ./IncidentUpdate.yaml

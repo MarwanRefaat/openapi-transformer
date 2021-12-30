@@ -1,0 +1,42 @@
+title: ItemApplicationScopesUpdateRequest
+required:
+  - access_token
+  - application_id
+  - context
+  - scopes
+type: object
+properties:
+  client_id:
+    type: string
+    description: >-
+      Your Plaid API `client_id`. The `client_id` is required and may be
+      provided either in the `PLAID-CLIENT-ID` header or as part of a request
+      body.
+    default: 5fd43aad1186c30013d6f3e2
+  secret:
+    type: string
+    description: >-
+      Your Plaid API `secret`. The `secret` is required and may be provided
+      either in the `PLAID-SECRET` header or as part of a request body.
+  access_token:
+    type: string
+    description: The access token associated with the Item data is being requested for.
+  application_id:
+    type: string
+    description: >-
+      This field will map to the application ID that is returned from
+      /item/applications/list, or provided to the institution in an oauth
+      redirect.
+  scopes:
+    $ref: ./Scopes.yaml
+  state:
+    type: string
+    description: >-
+      When scopes are updated during enrollment, this field must be populated
+      with the state sent to the partner in the OAuth Login URI. This field is
+      required when the context is `ENROLLMENT`.
+  context:
+    $ref: ./ScopesContext.yaml
+description: >-
+  ItemApplicationScopesUpdateRequest defines the request schema for
+  `/item/application/scopes/update`

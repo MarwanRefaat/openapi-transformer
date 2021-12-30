@@ -1,0 +1,23 @@
+title: ProcessorAuthGetRequest
+required:
+  - processor_token
+type: object
+properties:
+  client_id:
+    type: string
+    description: >-
+      Your Plaid API `client_id`. The `client_id` is required and may be
+      provided either in the `PLAID-CLIENT-ID` header or as part of a request
+      body.
+    default: 5fd43aad1186c30013d6f3e2
+  secret:
+    type: string
+    description: >-
+      Your Plaid API `secret`. The `secret` is required and may be provided
+      either in the `PLAID-SECRET` header or as part of a request body.
+  processor_token:
+    type: string
+    description: >-
+      The processor token obtained from the Plaid integration partner. Processor
+      tokens are in the format: `processor-<environment>-<identifier>`
+description: ProcessorAuthGetRequest defines the request schema for `/processor/auth/get`

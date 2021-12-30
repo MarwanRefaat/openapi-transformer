@@ -1,0 +1,33 @@
+title: LinkTokenGetMetadataResponse
+required:
+  - client_name
+  - country_codes
+  - initial_products
+  - language
+  - redirect_uri
+  - webhook
+type: object
+properties:
+  initial_products:
+    type: array
+    description: The `products` specified in the `/link/token/create` call.
+    items:
+      $ref: ./Products.yaml
+  webhook:
+    description: The `webhook` specified in the `/link/token/create` call.
+  country_codes:
+    type: array
+    description: The `country_codes` specified in the `/link/token/create` call.
+    items:
+      $ref: ./CountryCode.yaml
+  language:
+    description: The `language` specified in the `/link/token/create` call.
+  account_filters:
+    $ref: ./AccountFiltersResponse.yaml
+  redirect_uri:
+    description: The `redirect_uri` specified in the `/link/token/create` call.
+  client_name:
+    description: The `client_name` specified in the `/link/token/create` call.
+description: >-
+  An object specifying the arguments originally provided to the
+  `/link/token/create` call.

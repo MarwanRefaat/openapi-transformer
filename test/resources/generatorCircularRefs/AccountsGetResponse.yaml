@@ -1,0 +1,27 @@
+title: AccountsGetResponse
+required:
+  - accounts
+  - item
+  - request_id
+type: object
+properties:
+  accounts:
+    type: array
+    description: >-
+      An array of financial institution accounts associated with the Item.
+
+      If `/accounts/balance/get` was called, each account will include real-time
+      balance information.
+    items:
+      $ref: ./Account.yaml
+  item:
+    $ref: ./Item.yaml
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: >-
+  AccountsGetResponse defines the response schema for `/accounts/get` and
+  `/accounts/balance/get`.

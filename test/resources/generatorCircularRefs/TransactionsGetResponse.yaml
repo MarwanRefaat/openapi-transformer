@@ -1,0 +1,42 @@
+title: TransactionsGetResponse
+required:
+  - accounts
+  - item
+  - request_id
+  - total_transactions
+  - transactions
+type: object
+properties:
+  accounts:
+    type: array
+    description: >-
+      An array containing the `accounts` associated with the Item for which
+      transactions are being returned. Each transaction can be mapped to its
+      corresponding account via the `account_id` field.
+    items:
+      $ref: ./Account.yaml
+  transactions:
+    type: array
+    description: >-
+      An array containing transactions from the account. Transactions are
+      returned in reverse chronological order, with the most recent at the
+      beginning of the array. The maximum number of transactions returned is
+      determined by the `count` parameter.
+    items:
+      $ref: ./Transaction.yaml
+  total_transactions:
+    type: integer
+    description: >-
+      The total number of transactions available within the date range
+      specified. If `total_transactions` is larger than the size of the
+      `transactions` array, more transactions are available and can be fetched
+      via manipulating the `offset` parameter.
+  item:
+    $ref: ./Item.yaml
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: TransactionsGetResponse defines the response schema for `/transactions/get`

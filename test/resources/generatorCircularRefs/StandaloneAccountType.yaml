@@ -1,0 +1,25 @@
+title: StandaloneAccountType
+required:
+  - credit
+  - depository
+  - investment
+  - loan
+  - other
+type: object
+properties:
+  depository:
+    $ref: ./DepositoryAccount.yaml
+  credit:
+    $ref: ./CreditAccount.yaml
+  loan:
+    $ref: ./LoanAccount.yaml
+  investment:
+    $ref: ./InvestmentAccountSubtype.yaml
+  other:
+    type: string
+    description: >-
+      Other or unknown account type. Supported products for `other` accounts
+      are: Balance, Transactions, Identity, and Assets.
+description: >-
+  The schema below describes the various `types` and corresponding `subtypes`
+  that Plaid recognizes and reports for financial institution accounts.

@@ -1,0 +1,33 @@
+title: TransactionLocation
+required:
+  - address
+  - city
+  - country
+  - lat
+  - lon
+  - postal_code
+  - region
+  - store_number
+type: object
+properties:
+  address:
+    description: The street address where the transaction occurred.
+  city:
+    description: The city where the transaction occurred.
+  region:
+    description: >-
+      The region or state where the transaction occurred. In API versions
+      2018-05-22 and earlier, this field is called `state`.
+  postal_code:
+    description: >-
+      The postal code where the transaction occurred. In API versions 2018-05-22
+      and earlier, this field is called `zip`.
+  country:
+    description: The ISO 3166-1 alpha-2 country code where the transaction occurred.
+  lat:
+    description: The latitude where the transaction occurred.
+  lon:
+    description: The longitude where the transaction occurred.
+  store_number:
+    description: The merchant defined store number where the transaction occurred.
+description: A representation of where a transaction took place

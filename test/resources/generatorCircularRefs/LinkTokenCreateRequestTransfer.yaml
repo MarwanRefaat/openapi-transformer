@@ -1,0 +1,7 @@
+title: LinkTokenCreateRequestTransfer
+type: object
+properties:
+  intent_id:
+    type: string
+    description: The `id` returned by the `/transfer/intent/create` endpoint.
+description: Specifies options for initializing Link for use with the Transfer product.

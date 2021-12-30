@@ -1,0 +1,19 @@
+title: SignalEvaluateResponse
+required:
+  - request_id
+  - scores
+type: object
+properties:
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+  scores:
+    $ref: ./SignalEvaluateScores.yaml
+  core_attributes:
+    $ref: ./SignalEvaluateCoreAttributes.yaml
+description: >-
+  SignalEvaluateResponse defines the response schema for
+  `/signal/income/evaluate`

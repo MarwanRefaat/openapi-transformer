@@ -1,0 +1,27 @@
+title: ProcessorStripeBankAccountTokenCreateRequest
+required:
+  - access_token
+  - account_id
+type: object
+properties:
+  client_id:
+    type: string
+    description: >-
+      Your Plaid API `client_id`. The `client_id` is required and may be
+      provided either in the `PLAID-CLIENT-ID` header or as part of a request
+      body.
+    default: 5fd43aad1186c30013d6f3e2
+  secret:
+    type: string
+    description: >-
+      Your Plaid API `secret`. The `secret` is required and may be provided
+      either in the `PLAID-SECRET` header or as part of a request body.
+  access_token:
+    type: string
+    description: The access token associated with the Item data is being requested for.
+  account_id:
+    type: string
+    description: The `account_id` value obtained from the `onSuccess` callback in Link
+description: >-
+  ProcessorStripeBankAccountTokenCreateRequest defines the request schema for
+  `/processor/stripe/bank_account/create`

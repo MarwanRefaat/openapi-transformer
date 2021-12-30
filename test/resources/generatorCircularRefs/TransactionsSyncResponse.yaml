@@ -1,0 +1,49 @@
+title: TransactionsSyncResponse
+required:
+  - added
+  - has_more
+  - modified
+  - next_cursor
+  - removed
+  - request_id
+type: object
+properties:
+  added:
+    type: array
+    description: >-
+      Transactions that have been added to the item since `cursor` ordered by
+      ascending last modified time.
+    items:
+      $ref: ./Transaction.yaml
+  modified:
+    type: array
+    description: >-
+      Transactions that have been modified on the item since `cursor` ordered by
+      ascending last modified time.
+    items:
+      $ref: ./Transaction.yaml
+  removed:
+    type: array
+    description: >-
+      Transactions that have been removed from the item since `cursor` ordered
+      by ascending last modified time.
+    items:
+      $ref: ./RemovedTransaction.yaml
+  next_cursor:
+    type: string
+    description: >-
+      Cursor used for fetching any future updates after the latest update
+      provided in this response.
+  has_more:
+    type: boolean
+    description: >-
+      Represents if more than requested count of transaction updates exist. If
+      true, the additional updates can be fetched by making an additional
+      request with `cursor` set to `next_cursor`.
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: TransactionsSyncResponse defines the response schema for `/transactions/sync`

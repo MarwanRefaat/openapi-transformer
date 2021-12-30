@@ -1,0 +1,8 @@
+title: AccountFiltersResponse
+type: object
+properties:
+  depository:
+    $ref: ./DepositoryFilter.yaml
+  credit:
+    $ref: ./CreditFilter.yaml
+description: The `account_filters` specified in the original call to `/link/token/create`.

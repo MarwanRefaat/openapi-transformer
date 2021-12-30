@@ -1,0 +1,27 @@
+title: AccountFilter
+type: object
+properties:
+  depository:
+    type: array
+    description: A list of account subtypes to be filtered.
+    items:
+      type: string
+  credit:
+    type: array
+    description: A list of account subtypes to be filtered.
+    items:
+      type: string
+  loan:
+    type: array
+    description: A list of account subtypes to be filtered.
+    items:
+      type: string
+  investment:
+    type: array
+    description: A list of account subtypes to be filtered.
+    items:
+      type: string
+description: >-
+  Enumerates the account subtypes that the application wishes for the user to be
+  able to select from. For more details refer to Plaid documentation on account
+  filters.

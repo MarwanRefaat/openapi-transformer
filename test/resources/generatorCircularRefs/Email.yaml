@@ -1,0 +1,18 @@
+title: Email
+required:
+  - data
+  - primary
+  - type
+type: object
+properties:
+  data:
+    type: string
+    description: The email address.
+  primary:
+    type: boolean
+    description: >-
+      When `true`, identifies the email address as the primary email on an
+      account.
+  type:
+    $ref: ./Type1.yaml
+description: An object representing an email address

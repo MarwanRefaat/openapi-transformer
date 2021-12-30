@@ -1,0 +1,17 @@
+title: InstitutionsGetByIdResponse
+required:
+  - institution
+  - request_id
+type: object
+properties:
+  institution:
+    $ref: ./Institution.yaml
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: >-
+  InstitutionsGetByIdResponse defines the response schema for
+  `/institutions/get_by_id`

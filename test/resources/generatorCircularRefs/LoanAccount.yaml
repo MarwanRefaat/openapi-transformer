@@ -1,0 +1,55 @@
+title: LoanAccount
+required:
+  - auto
+  - business
+  - commercial
+  - construction
+  - consumer
+  - home equity
+  - line of credit
+  - loan
+  - mortgage
+  - other
+  - overdraft
+  - student
+type: object
+properties:
+  auto:
+    type: string
+    description: Auto loan
+  business:
+    type: string
+    description: Business loan
+  commercial:
+    type: string
+    description: Commercial loan
+  construction:
+    type: string
+    description: Construction loan
+  consumer:
+    type: string
+    description: Consumer loan
+  home equity:
+    type: string
+    description: Home Equity Line of Credit (HELOC)
+  loan:
+    type: string
+    description: General loan
+  mortgage:
+    type: string
+    description: Mortgage loan
+  overdraft:
+    type: string
+    description: Pre-approved overdraft account, usually tied to a checking account
+  line of credit:
+    type: string
+    description: Pre-approved line of credit
+  student:
+    type: string
+    description: Student loan
+  other:
+    type: string
+    description: Other loan type or unknown loan type
+description: >-
+  A loan type account. Supported products for `loan` accounts are: Balance,
+  Liabilities, and Transactions.

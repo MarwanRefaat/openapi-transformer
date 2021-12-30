@@ -1,0 +1,20 @@
+title: InstitutionsSearchResponse
+required:
+  - institutions
+  - request_id
+type: object
+properties:
+  institutions:
+    type: array
+    description: An array of institutions matching the search criteria
+    items:
+      $ref: ./Institution.yaml
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: >-
+  InstitutionsSearchResponse defines the response schema for
+  `/institutions/search`

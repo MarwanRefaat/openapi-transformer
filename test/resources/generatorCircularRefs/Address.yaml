@@ -1,0 +1,11 @@
+title: Address
+required:
+  - data
+type: object
+properties:
+  data:
+    $ref: ./AddressData.yaml
+  primary:
+    type: boolean
+    description: When `true`, identifies the address as the primary address on an account.
+description: A physical mailing address.

@@ -1,0 +1,33 @@
+title: Application
+required:
+  - application_id
+  - application_url
+  - created_at
+  - logo_url
+  - name
+  - reason_for_access
+type: object
+properties:
+  application_id:
+    type: string
+    description: >-
+      This field will map to the application ID that is returned from
+      /item/applications/list, or provided to the institution in an oauth
+      redirect.
+  name:
+    type: string
+    description: The name of the application
+  created_at:
+    type: string
+    description: >-
+      The date this application was linked in [ISO
+      8601](https://wikipedia.org/wiki/ISO_8601) (YYYY-MM-DD) format in UTC.
+  logo_url:
+    description: A URL that links to the application logo image.
+  application_url:
+    description: The URL for the application's website
+  reason_for_access:
+    description: >-
+      A string provided by the connected app stating why they use their
+      respective enabled products.
+description: Metadata about the application

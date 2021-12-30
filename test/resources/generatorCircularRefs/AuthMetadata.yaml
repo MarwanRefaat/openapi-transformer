@@ -1,0 +1,8 @@
+title: AuthMetadata
+required:
+  - supported_methods
+type: object
+properties:
+  supported_methods:
+    $ref: ./AuthSupportedMethods.yaml
+description: Metadata that captures information about the Auth features of an institution.

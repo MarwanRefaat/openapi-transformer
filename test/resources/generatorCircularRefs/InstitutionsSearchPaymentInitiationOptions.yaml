@@ -1,0 +1,9 @@
+title: InstitutionsSearchPaymentInitiationOptions
+type: object
+properties:
+  payment_id:
+    type: string
+    description: A unique ID identifying the payment
+description: >-
+  Additional options that will be used to filter institutions by various Payment
+  Initiation configurations.

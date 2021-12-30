@@ -1,0 +1,23 @@
+title: InstitutionsSearchAccountFilter
+type: object
+properties:
+  loan:
+    type: array
+    description: ''
+    items:
+      $ref: ./AccountSubtype.yaml
+  depository:
+    type: array
+    description: ''
+    items:
+      $ref: ./AccountSubtype.yaml
+  credit:
+    type: array
+    description: ''
+    items:
+      $ref: ./AccountSubtype.yaml
+  investment:
+    type: array
+    description: ''
+    items:
+      $ref: ./AccountSubtype.yaml

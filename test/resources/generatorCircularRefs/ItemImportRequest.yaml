@@ -1,0 +1,29 @@
+title: ItemImportRequest
+required:
+  - products
+  - user_auth
+type: object
+properties:
+  client_id:
+    type: string
+    description: >-
+      Your Plaid API `client_id`. The `client_id` is required and may be
+      provided either in the `PLAID-CLIENT-ID` header or as part of a request
+      body.
+    default: 5fd43aad1186c30013d6f3e2
+  secret:
+    type: string
+    description: >-
+      Your Plaid API `secret`. The `secret` is required and may be provided
+      either in the `PLAID-SECRET` header or as part of a request body.
+  products:
+    minItems: 1
+    type: array
+    description: Array of product strings
+    items:
+      $ref: ./Products.yaml
+  user_auth:
+    $ref: ./ItemImportRequestUserAuth.yaml
+  options:
+    $ref: ./ItemImportRequestOptions.yaml
+description: ItemImportRequest defines the request schema for `/item/import`

@@ -1,0 +1,96 @@
+title: UnofficialCurrencyCodeList
+required:
+  - ADA
+  - BAT
+  - BCH
+  - BNB
+  - BTC
+  - BTG
+  - CNH
+  - DASH
+  - DOGE
+  - ETC
+  - ETH
+  - GBX
+  - LSK
+  - NEO
+  - OMG
+  - QTUM
+  - USDT
+  - XLM
+  - XMR
+  - XRP
+  - ZEC
+  - ZRX
+type: object
+properties:
+  ADA:
+    type: string
+    description: Cardano
+  BAT:
+    type: string
+    description: Basic Attention Token
+  BCH:
+    type: string
+    description: Bitcoin Cash
+  BNB:
+    type: string
+    description: Binance Coin
+  BTC:
+    type: string
+    description: Bitcoin
+  BTG:
+    type: string
+    description: Bitcoin Gold
+  BSV:
+    type: string
+    description: Bitcoin Satoshi Vision
+  CNH:
+    type: string
+    description: Chinese Yuan (offshore)
+  DASH:
+    type: string
+    description: Dash
+  DOGE:
+    type: string
+    description: Dogecoin
+  ETC:
+    type: string
+    description: Ethereum Classic
+  ETH:
+    type: string
+    description: Ethereum
+  GBX:
+    type: string
+    description: Pence sterling, i.e. British penny
+  LSK:
+    type: string
+    description: Lisk
+  NEO:
+    type: string
+    description: Neo
+  OMG:
+    type: string
+    description: OmiseGO
+  QTUM:
+    type: string
+    description: Qtum
+  USDT:
+    type: string
+    description: TehterUS
+  XLM:
+    type: string
+    description: Stellar Lumen
+  XMR:
+    type: string
+    description: Monero
+  XRP:
+    type: string
+    description: Ripple
+  ZEC:
+    type: string
+    description: Zcash
+  ZRX:
+    type: string
+    description: 0x
+description: List of unofficial currency codes

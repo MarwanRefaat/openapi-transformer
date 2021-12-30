@@ -1,0 +1,17 @@
+title: ItemApplicationListResponse
+required:
+  - applications
+type: object
+properties:
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+  applications:
+    type: array
+    description: A list of connected applications.
+    items:
+      $ref: ./ConnectedApplication.yaml
+description: Describes the connected application for a particular end user.

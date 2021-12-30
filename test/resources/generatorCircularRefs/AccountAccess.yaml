@@ -1,0 +1,17 @@
+title: AccountAccess
+required:
+  - unique_id
+type: object
+properties:
+  unique_id:
+    type: string
+    description: >-
+      The unique account identifier for this account. This value must match that
+      returned by the data access API for this account.
+  authorized:
+    description: >-
+      Allow the application to see this account (and associated details,
+      including balance) in the list of accounts  If unset, defaults to `true`.
+description: >-
+  Allow or disallow product access by account. Unlisted (e.g. missing) accounts
+  will be considered `new_accounts`.

@@ -1,0 +1,14 @@
+title: LinkTokenCreateRequestAuth
+required:
+  - flow_type
+type: object
+properties:
+  flow_type:
+    type: string
+    description: >-
+      The optional Auth flow to use. Currently only used to enable Flexible
+      Auth.
+description: >-
+  Specifies options for initializing Link for use with the Auth product. This
+  field is currently only required if using the Flexible Auth product (currently
+  in closed beta).

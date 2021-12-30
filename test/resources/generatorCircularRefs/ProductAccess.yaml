@@ -1,0 +1,23 @@
+title: ProductAccess
+type: object
+properties:
+  statements:
+    description: >-
+      Allow access to statements. Only used by certain partners. If relevant to
+      the partner and unset, defaults to `true`.
+  identity:
+    description: >-
+      Allow access to the Identity product (name, email, phone, address). Only
+      used by certain partners. If relevant to the partner and unset, defaults
+      to `true`.
+  auth:
+    description: >-
+      Allow access to account number details. Only used by certain partners. If
+      relevant to the partner and unset, defaults to `true`.
+  transactions:
+    description: >-
+      Allow access to transaction details. Only used by certain partners. If
+      relevant to the partner and unset, defaults to `true`.
+description: >-
+  The product access being requested. Used to or disallow product access across
+  all accounts. If unset, defaults to all products allowed.

@@ -1,0 +1,12 @@
+title: ItemRemoveResponse
+required:
+  - request_id
+type: object
+properties:
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: ItemRemoveResponse defines the response schema for `/item/remove`

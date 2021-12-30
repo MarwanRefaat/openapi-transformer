@@ -1,0 +1,58 @@
+title: Item
+required:
+  - available_products
+  - billed_products
+  - consent_expiration_time
+  - error
+  - item_id
+  - update_type
+  - webhook
+type: object
+properties:
+  item_id:
+    type: string
+    description: >-
+      The Plaid Item ID. The `item_id` is always unique; linking the same
+      account at the same institution twice will result in two Items with
+      different `item_id` values. Like all Plaid identifiers, the `item_id` is
+      case-sensitive.
+  institution_id:
+    description: >-
+      The Plaid Institution ID associated with the Item. Field is `null` for
+      Items created via Same Day Micro-deposits.
+  webhook:
+    description: The URL registered to receive webhooks for the Item.
+  error:
+    $ref: ./Error.yaml
+  available_products:
+    type: array
+    description: A list of products available for the Item that have not yet been accessed.
+    items:
+      $ref: ./Products.yaml
+  billed_products:
+    type: array
+    description: >-
+      A list of products that have been billed for the Item. Note -
+      `billed_products` is populated in all environments but only requests in
+      Production are billed.
+    items:
+      $ref: ./Products.yaml
+  products:
+    type: array
+    description: A list of authorized products for the Item.
+    items:
+      $ref: ./Products.yaml
+  consent_expiration_time:
+    description: >-
+      The RFC 3339 timestamp after which the consent provided by the end user
+      will expire. Upon consent expiration, the item will enter the
+      `ITEM_LOGIN_REQUIRED` error state. To circumvent the `ITEM_LOGIN_REQUIRED`
+      error and maintain continuous consent, the end user can reauthenticate via
+      Link’s update mode in advance of the consent expiration time.
+
+
+      Note - This is only relevant for certain OAuth-based institutions. For all
+      other institutions, this field will be null.
+  update_type:
+    $ref: ./UpdateType.yaml
+description: Metadata about the Item.

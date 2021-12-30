@@ -1,0 +1,17 @@
+title: ProcessorIdentityGetResponse
+required:
+  - account
+  - request_id
+type: object
+properties:
+  account:
+    $ref: ./AccountIdentity.yaml
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: >-
+  ProcessorIdentityGetResponse defines the response schema for
+  `/processor/identity/get`

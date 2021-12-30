@@ -1,0 +1,46 @@
+title: DepositoryAccount
+required:
+  - cash management
+  - cd
+  - checking
+  - ebt
+  - hsa
+  - money market
+  - paypal
+  - prepaid
+  - savings
+type: object
+properties:
+  checking:
+    type: string
+    description: Checking account
+  savings:
+    type: string
+    description: Savings account
+  hsa:
+    type: string
+    description: Health Savings Account (US only) that can only hold cash
+  cd:
+    type: string
+    description: Certificate of deposit account
+  money market:
+    type: string
+    description: Money market account
+  paypal:
+    type: string
+    description: PayPal depository account
+  prepaid:
+    type: string
+    description: Prepaid debit card
+  cash management:
+    type: string
+    description: A cash management account, typically a cash account at a brokerage
+  ebt:
+    type: string
+    description: >-
+      An Electronic Benefit Transfer (EBT) account, used by certain public
+      assistance programs to distribute funds (US only)
+description: >-
+  An account type holding cash, in which funds are deposited. Supported products
+  for `depository` accounts are: Auth, Balance, Transactions, Identity, Payment
+  Initiation, and Assets.

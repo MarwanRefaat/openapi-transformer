@@ -1,0 +1,24 @@
+title: AuthGetResponse
+required:
+  - accounts
+  - item
+  - numbers
+  - request_id
+type: object
+properties:
+  accounts:
+    type: array
+    description: The `accounts` for which numbers are being retrieved.
+    items:
+      $ref: ./Account.yaml
+  numbers:
+    $ref: ./AuthGetNumbers.yaml
+  item:
+    $ref: ./Item.yaml
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: AuthGetResponse defines the response schema for `/auth/get`

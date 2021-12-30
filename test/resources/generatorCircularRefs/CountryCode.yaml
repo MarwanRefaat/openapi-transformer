@@ -1,0 +1,12 @@
+title: CountryCode
+type: string
+description: ISO-3166-1 alpha-2 country code standard.
+enum:
+  - US
+  - GB
+  - ES
+  - NL
+  - FR
+  - IE
+  - CA
+  - DE

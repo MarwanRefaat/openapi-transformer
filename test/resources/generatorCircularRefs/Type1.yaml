@@ -1,0 +1,7 @@
+title: Type1
+type: string
+description: The type of email account as described by the financial institution.
+enum:
+  - primary
+  - secondary
+  - other

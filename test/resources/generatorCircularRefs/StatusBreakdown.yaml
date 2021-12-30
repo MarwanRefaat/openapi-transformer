@@ -1,0 +1,27 @@
+title: StatusBreakdown
+required:
+  - error_institution
+  - error_plaid
+  - success
+type: object
+properties:
+  success:
+    type: number
+    description: >-
+      The percentage of login attempts that are successful, expressed as a
+      decimal.
+  error_plaid:
+    type: number
+    description: >-
+      The percentage of logins that are failing due to an internal Plaid issue,
+      expressed as a decimal.
+  error_institution:
+    type: number
+    description: >-
+      The percentage of logins that are failing due to an issue in the
+      institution's system, expressed as a decimal.
+  refresh_interval:
+    $ref: ./RefreshInterval.yaml
+description: >-
+  A detailed breakdown of the institution's performance for a request type. The
+  values for `success`, `error_plaid`, and `error_institution` sum to 1.

@@ -1,0 +1,22 @@
+title: InstitutionsGetResponse
+required:
+  - institutions
+  - request_id
+  - total
+type: object
+properties:
+  institutions:
+    type: array
+    description: A list of Plaid Institution
+    items:
+      $ref: ./Institution.yaml
+  total:
+    type: integer
+    description: The total number of institutions available via this endpoint
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: InstitutionsGetResponse defines the response schema for `/institutions/get`

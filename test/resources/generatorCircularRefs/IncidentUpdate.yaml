@@ -1,0 +1,14 @@
+title: IncidentUpdate
+type: object
+properties:
+  description:
+    type: string
+    description: The content of the update.
+  status:
+    $ref: ./Status.yaml
+  updated_date:
+    type: string
+    description: >-
+      The date when the update was published, in [ISO
+      8601](https://wikipedia.org/wiki/ISO_8601) format, e.g.
+      `"2020-10-30T15:26:48Z"`.

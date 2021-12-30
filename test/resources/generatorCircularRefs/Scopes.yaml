@@ -1,0 +1,15 @@
+title: Scopes
+type: object
+properties:
+  product_access:
+    $ref: ./ProductAccess.yaml
+  accounts:
+    type: array
+    description: ''
+    items:
+      $ref: ./AccountAccess.yaml
+  new_accounts:
+    description: >-
+      Allow access to newly opened accounts as they are opened. If unset,
+      defaults to `true`.
+description: The scopes object

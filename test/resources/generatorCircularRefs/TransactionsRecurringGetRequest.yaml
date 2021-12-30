@@ -1,0 +1,34 @@
+title: TransactionsRecurringGetRequest
+required:
+  - access_token
+  - account_ids
+type: object
+properties:
+  client_id:
+    type: string
+    description: >-
+      Your Plaid API `client_id`. The `client_id` is required and may be
+      provided either in the `PLAID-CLIENT-ID` header or as part of a request
+      body.
+    default: 5fd43aad1186c30013d6f3e2
+  access_token:
+    type: string
+    description: The access token associated with the Item data is being requested for.
+  secret:
+    type: string
+    description: >-
+      Your Plaid API `secret`. The `secret` is required and may be provided
+      either in the `PLAID-SECRET` header or as part of a request body.
+  account_ids:
+    type: array
+    description: >-
+      A list of `account_ids` to retrieve for the Item
+
+
+      Note: An error will be returned if a provided `account_id` is not
+      associated with the Item.
+    items:
+      type: string
+description: >-
+  TransactionsRecurringGetRequest defines the request schema for
+  `/transactions/recurring/get`

@@ -1,0 +1,9 @@
+title: Status
+type: string
+description: The status of the incident.
+enum:
+  - INVESTIGATING
+  - IDENTIFIED
+  - SCHEDULED
+  - RESOLVED
+  - UNKNOWN

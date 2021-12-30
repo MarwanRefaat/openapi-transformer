@@ -1,0 +1,13 @@
+title: Products
+type: string
+description: >-
+  A list of products that an institution can support. All Items must be
+  initialized with at least one product. The Balance product is always available
+  and does not need to be specified during initialization.
+enum:
+  - auth
+  - balance
+  - identity
+  - transactions
+  - standing_orders
+  - transfer

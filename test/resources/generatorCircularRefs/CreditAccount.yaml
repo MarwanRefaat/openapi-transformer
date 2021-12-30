@@ -1,0 +1,15 @@
+title: CreditAccount
+required:
+  - credit card
+  - paypal
+type: object
+properties:
+  credit card:
+    type: string
+    description: Bank-issued credit card
+  paypal:
+    type: string
+    description: PayPal-issued credit card
+description: >-
+  A credit card type account. Supported products for `credit` accounts are:
+  Balance, Transactions, Identity, and Liabilities.

@@ -1,0 +1,10 @@
+title: ItemStatusLastWebhook
+type: object
+properties:
+  sent_at:
+    description: >-
+      [ISO 8601](https://wikipedia.org/wiki/ISO_8601) timestamp of when the
+      webhook was fired.
+  code_sent:
+    description: The last webhook code sent.
+description: Information about the last webhook fired for the Item.

@@ -1,0 +1,210 @@
+title: InvestmentAccountSubtype
+required:
+  - 401a
+  - 401k
+  - 403B
+  - 457b
+  - '529'
+  - brokerage
+  - cash isa
+  - education savings account
+  - fixed annuity
+  - gic
+  - health reimbursement arrangement
+  - hsa
+  - ira
+  - isa
+  - keogh
+  - lif
+  - life insurance
+  - lira
+  - lrif
+  - lrsp
+  - mutual fund
+  - non-taxable brokerage account
+  - other
+  - other annuity
+  - other insurance
+  - pension
+  - prif
+  - profit sharing plan
+  - qshr
+  - rdsp
+  - resp
+  - retirement
+  - rlif
+  - roth
+  - roth 401k
+  - rrif
+  - rrsp
+  - sarsep
+  - sep ira
+  - simple ira
+  - sipp
+  - stock plan
+  - tfsa
+  - trust
+  - ugma
+  - utma
+  - variable annuity
+type: object
+properties:
+  '529':
+    type: string
+    description: Tax-advantaged college savings and prepaid tuition 529 plans (US)
+  401a:
+    type: string
+    description: Employer-sponsored money-purchase 401(a) retirement plan (US)
+  401k:
+    type: string
+    description: Standard 401(k) retirement account (US)
+  403B:
+    type: string
+    description: 403(b) retirement savings account for non-profits and schools (US)
+  457b:
+    type: string
+    description: >-
+      Tax-advantaged deferred-compensation 457(b) retirement plan for
+      governments and non-profits (US)
+  brokerage:
+    type: string
+    description: Standard brokerage account
+  cash isa:
+    type: string
+    description: Individual Savings Account (ISA) that pays interest tax-free (UK)
+  education savings account:
+    type: string
+    description: Tax-advantaged Coverdell Education Savings Account (ESA) (US)
+  fixed annuity:
+    type: string
+    description: Fixed annuity
+  gic:
+    type: string
+    description: Guaranteed Investment Certificate (Canada)
+  health reimbursement arrangement:
+    type: string
+    description: Tax-advantaged Health Reimbursement Arrangement (HRA) benefit plan (US)
+  hsa:
+    type: string
+    description: Non-cash tax-advantaged medical Health Savings Account (HSA) (US)
+  ira:
+    type: string
+    description: Traditional Invididual Retirement Account (IRA) (US)
+  isa:
+    type: string
+    description: Non-cash Individual Savings Account (ISA) (UK)
+  keogh:
+    type: string
+    description: Keogh self-employed retirement plan (US)
+  lif:
+    type: string
+    description: Life Income Fund (LIF) retirement account (Canada)
+  life insurance:
+    type: string
+    description: Life insurance account
+  lira:
+    type: string
+    description: Locked-in Retirement Account (LIRA) (Canada)
+  lrif:
+    type: string
+    description: Locked-in Retirement Income Fund (LRIF) (Canada)
+  lrsp:
+    type: string
+    description: Locked-in Retirement Savings Plan (Canada)
+  mutual fund:
+    type: string
+    description: Mutual fund account
+  non-taxable brokerage account:
+    type: string
+    description: >-
+      A non-taxable brokerage account that is not covered by a more specific
+      subtype
+  other:
+    type: string
+    description: An account whose type could not be determined
+  other annuity:
+    type: string
+    description: An annuity account not covered by other subtypes
+  other insurance:
+    type: string
+    description: An insurance account not covered by other subtypes
+  pension:
+    type: string
+    description: Standard pension account
+  prif:
+    type: string
+    description: Prescribed Registered Retirement Income Fund (Canada)
+  profit sharing plan:
+    type: string
+    description: Plan that gives employees share of company profits
+  qshr:
+    type: string
+    description: Qualifying share account
+  rdsp:
+    type: string
+    description: Registered Disability Savings Plan (RSDP) (Canada)
+  resp:
+    type: string
+    description: Registered Education Savings Plan (Canada)
+  retirement:
+    type: string
+    description: Retirement account not covered by other subtypes
+  rlif:
+    type: string
+    description: Restricted Life Income Fund (RLIF) (Canada)
+  roth:
+    type: string
+    description: Roth IRA (US)
+  roth 401k:
+    type: string
+    description: Employer-sponsored Roth 401(k) plan (US)
+  rrif:
+    type: string
+    description: Registered Retirement Income Fund (RRIF) (Canada)
+  rrsp:
+    type: string
+    description: Registered Retirement Savings Plan (Canadian, similar to US 401(k))
+  sarsep:
+    type: string
+    description: >-
+      Salary Reduction Simplified Employee Pension Plan (SARSEP), discontinued
+      retirement plan (US)
+  sep ira:
+    type: string
+    description: >-
+      Simplified Employee Pension IRA (SEP IRA), retirement plan for small
+      businesses and self-employed (US)
+  simple ira:
+    type: string
+    description: >-
+      Savings Incentive Match Plan for Employees IRA, retirement plan for small
+      businesses (US)
+  sipp:
+    type: string
+    description: Self-Invested Personal Pension (SIPP) (UK)
+  stock plan:
+    type: string
+    description: Standard stock plan account
+  tfsa:
+    type: string
+    description: >-
+      Tax-Free Savings Account (TFSA), a retirement plan similar to a Roth IRA
+      (Canada)
+  trust:
+    type: string
+    description: >-
+      Account representing funds or assets held by a trustee for the benefit of
+      a beneficiary. Includes both revocable and irrevocable trusts.
+  ugma:
+    type: string
+    description: '''Uniform Gift to Minors Act'' (brokerage account for minors, US)'
+  utma:
+    type: string
+    description: '''Uniform Transfers to Minors Act'' (brokerage account for minors, US)'
+  variable annuity:
+    type: string
+    description: Tax-deferred capital accumulation annuity contract
+description: >-
+  An investment account. Supported products for `investment` accounts are:
+  Balance and Investments. In API versions 2018-05-22 and earlier, this type is
+  called `brokerage`.

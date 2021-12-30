@@ -1,0 +1,40 @@
+title: TransactionsGetRequestOptions
+type: object
+properties:
+  account_ids:
+    type: array
+    description: >-
+      A list of `account_ids` to retrieve for the Item
+
+
+      Note: An error will be returned if a provided `account_id` is not
+      associated with the Item.
+    items:
+      type: string
+  count:
+    maximum: 500
+    minimum: 1
+    type: integer
+    description: The number of transactions to fetch.
+    default: 100
+  offset:
+    minimum: 0
+    type: integer
+    description: The number of transactions to skip. The default value is 0.
+    default: 0
+  include_original_description:
+    description: >-
+      Include the raw unparsed transaction description from the financial
+      institution. This field is disabled by default. If you need this
+      information in addition to the parsed data provided, contact your Plaid
+      Account Manager.
+  include_personal_finance_category_beta:
+    type: boolean
+    description: >-
+      Include the `personal_finance_category` object in the response. This
+      feature is currently in beta – to request access, contact
+      transactions-feedback@plaid.com.
+    default: false
+description: >-
+  An optional object to be used with the request. If specified, `options` must
+  not be `null`.

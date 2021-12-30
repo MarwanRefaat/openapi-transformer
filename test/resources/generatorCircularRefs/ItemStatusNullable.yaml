@@ -1,0 +1,9 @@
+title: ItemStatusNullable
+type: object
+properties:
+  investments:
+    $ref: ./ItemStatusInvestments.yaml
+  transactions:
+    $ref: ./ItemStatusTransactions.yaml
+  last_webhook:
+    $ref: ./ItemStatusLastWebhook.yaml

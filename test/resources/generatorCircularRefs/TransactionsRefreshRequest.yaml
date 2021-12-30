@@ -1,0 +1,23 @@
+title: TransactionsRefreshRequest
+required:
+  - access_token
+type: object
+properties:
+  client_id:
+    type: string
+    description: >-
+      Your Plaid API `client_id`. The `client_id` is required and may be
+      provided either in the `PLAID-CLIENT-ID` header or as part of a request
+      body.
+    default: 5fd43aad1186c30013d6f3e2
+  access_token:
+    type: string
+    description: The access token associated with the Item data is being requested for.
+  secret:
+    type: string
+    description: >-
+      Your Plaid API `secret`. The `secret` is required and may be provided
+      either in the `PLAID-SECRET` header or as part of a request body.
+description: >-
+  TransactionsRefreshRequest defines the request schema for
+  `/transactions/refresh`

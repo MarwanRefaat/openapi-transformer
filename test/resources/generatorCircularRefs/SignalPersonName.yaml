@@ -1,0 +1,16 @@
+title: SignalPersonName
+type: object
+properties:
+  prefix:
+    description: The user's name prefix (e.g. "Mr.")
+  given_name:
+    description: >-
+      The user's given name. If the user has a one-word name, it should be
+      provided in this field.
+  middle_name:
+    description: The user's middle name
+  family_name:
+    description: The user's family name / surname
+  suffix:
+    description: The user's name suffix (e.g. "II")
+description: The user's legal name

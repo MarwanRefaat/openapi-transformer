@@ -1,0 +1,24 @@
+title: ItemPublicTokenExchangeResponse
+required:
+  - access_token
+  - item_id
+  - request_id
+type: object
+properties:
+  access_token:
+    type: string
+    description: The access token associated with the Item data is being requested for.
+  item_id:
+    type: string
+    description: >-
+      The `item_id` value of the Item associated with the returned
+      `access_token`
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: >-
+  ItemPublicTokenExchangeResponse defines the response schema for
+  `/item/public_token/exchange`

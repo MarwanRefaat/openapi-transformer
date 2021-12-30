@@ -1,0 +1,9 @@
+title: RecurringTransactionFrequency
+type: string
+description: describes the frequency of the transaction stream.
+enum:
+  - UNKNOWN
+  - WEEKLY
+  - BIWEEKLY
+  - SEMI_MONTHLY
+  - MONTHLY

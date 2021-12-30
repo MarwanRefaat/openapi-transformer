@@ -1,0 +1,31 @@
+title: SignalReturnReportRequest
+required:
+  - client_transaction_id
+  - return_code
+type: object
+properties:
+  client_id:
+    type: string
+    description: >-
+      Your Plaid API `client_id`. The `client_id` is required and may be
+      provided either in the `PLAID-CLIENT-ID` header or as part of a request
+      body.
+    default: 5fd43aad1186c30013d6f3e2
+  secret:
+    type: string
+    description: >-
+      Your Plaid API `secret`. The `secret` is required and may be provided
+      either in the `PLAID-SECRET` header or as part of a request body.
+  client_transaction_id:
+    maxLength: 36
+    minLength: 1
+    type: string
+    description: >-
+      Must be the same as the `client_transaction_id` supplied when calling
+      `/signal/evaluate`
+  return_code:
+    type: string
+    description: Must be a valid ACH return code (e.g. "R01")
+description: >-
+  SignalReturnReportRequest defines the request schema for
+  `/signal/return/report`

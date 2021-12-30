@@ -1,0 +1,14 @@
+title: SignalReturnReportResponse
+required:
+  - request_id
+type: object
+properties:
+  request_id:
+    type: string
+    description: >-
+      A unique identifier for the request, which can be used for
+      troubleshooting. This identifier, like all Plaid identifiers, is case
+      sensitive.
+description: >-
+  SignalReturnReportResponse defines the response schema for
+  `/signal/return/report`

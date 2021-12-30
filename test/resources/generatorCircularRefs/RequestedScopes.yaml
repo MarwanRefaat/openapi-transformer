@@ -1,0 +1,18 @@
+title: RequestedScopes
+required:
+  - account_selection_cardinality
+  - optional_product_access
+  - required_product_access
+type: object
+properties:
+  required_product_access:
+    $ref: ./ProductAccess.yaml
+  optional_product_access:
+    $ref: ./ProductAccess.yaml
+  account_filters:
+    $ref: ./AccountFilter.yaml
+  account_selection_cardinality:
+    $ref: ./AccountSelectionCardinality.yaml
+description: >-
+  Scope of required and optional account features or content from a
+  ConnectedApplication.

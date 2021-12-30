@@ -1,0 +1,113 @@
+title: TransactionBase
+required:
+  - account_id
+  - amount
+  - date
+  - iso_currency_code
+  - pending
+  - transaction_id
+  - unofficial_currency_code
+type: object
+properties:
+  pending_transaction_id:
+    description: >-
+      The ID of a posted transaction's associated pending transaction, where
+      applicable.
+  category_id:
+    description: >-
+      The ID of the category to which this transaction belongs. See
+      [Categories](https://plaid.com/docs/#category-overview).
+
+
+      If the `transactions` object was returned by an Assets endpoint such as
+      `/asset_report/get/` or `/asset_report/pdf/get`, this field will only
+      appear in an Asset Report with Insights.
+  category:
+    type: array
+    description: >-
+      A hierarchical array of the categories to which this transaction belongs.
+      See [Categories](https://plaid.com/docs/#category-overview).
+
+
+      If the `transactions` object was returned by an Assets endpoint such as
+      `/asset_report/get/` or `/asset_report/pdf/get`, this field will only
+      appear in an Asset Report with Insights.
+    items:
+      type: string
+  location:
+    $ref: ./TransactionLocation.yaml
+  payment_meta:
+    $ref: ./PaymentMeta.yaml
+  account_owner:
+    description: >-
+      The name of the account owner. This field is not typically populated and
+      only relevant when dealing with sub-accounts.
+  name:
+    type: string
+    description: >-
+      The merchant name or transaction description.
+
+
+      If the `transactions` object was returned by a Transactions endpoint such
+      as `/transactions/get`, this field will always appear. If the
+      `transactions` object was returned by an Assets endpoint such as
+      `/asset_report/get/` or `/asset_report/pdf/get`, this field will only
+      appear in an Asset Report with Insights.
+  original_description:
+    description: >-
+      The string returned by the financial institution to describe the
+      transaction. For transactions returned by `/transactions/get`, this field
+      is in beta and will be omitted unless the client is both enrolled in the
+      closed beta program and has set `options.include_original_description` to
+      `true`.
+  account_id:
+    type: string
+    description: The ID of the account in which this transaction occurred.
+  amount:
+    type: number
+    description: >-
+      The settled value of the transaction, denominated in the account's
+      currency, as stated in `iso_currency_code` or `unofficial_currency_code`.
+      Positive values when money moves out of the account; negative values when
+      money moves in. For example, debit card purchases are positive; credit
+      card payments, direct deposits, and refunds are negative.
+  iso_currency_code:
+    description: >-
+      The ISO-4217 currency code of the transaction. Always `null` if
+      `unofficial_currency_code` is non-null.
+  unofficial_currency_code:
+    description: >-
+      The unofficial currency code associated with the transaction. Always
+      `null` if `iso_currency_code` is non-`null`. Unofficial currency codes are
+      used for currencies that do not have official ISO currency codes, such as
+      cryptocurrencies and the currencies of certain countries.
+
+
+      See the [currency code
+      schema](https://plaid.com/docs/api/accounts#currency-code-schema) for a
+      full listing of supported `iso_currency_code`s.
+  date:
+    type: string
+    description: >-
+      For pending transactions, the date that the transaction occurred; for
+      posted transactions, the date that the transaction posted. Both dates are
+      returned in an [ISO 8601](https://wikipedia.org/wiki/ISO_8601) format (
+      `YYYY-MM-DD` ).
+  pending:
+    type: boolean
+    description: >-
+      When `true`, identifies the transaction as pending or unsettled. Pending
+      transaction details (name, type, amount, category ID) may change before
+      they are settled.
+  transaction_id:
+    type: string
+    description: >-
+      The unique ID of the transaction. Like all Plaid identifiers, the
+      `transaction_id` is case sensitive.
+  merchant_name:
+    description: The merchant name, as extracted by Plaid from the `name` field.
+  check_number:
+    description: >-
+      The check number of the transaction. This field is only populated for
+      check transactions.
+description: A representation of a transaction

@@ -1,0 +1,16 @@
+title: SignalUser
+type: object
+properties:
+  name:
+    $ref: ./SignalPersonName.yaml
+  phone_number:
+    description: >-
+      The user's phone number, in E.164 format: +{countrycode}{number}. For
+      example: "+14151234567"
+  email_address:
+    description: The user's email address.
+  address:
+    $ref: ./AddressData1.yaml
+description: >-
+  Details about the end user initiating the transaction (i.e., the account
+  holder).

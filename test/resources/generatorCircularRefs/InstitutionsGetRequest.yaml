@@ -1,0 +1,42 @@
+title: InstitutionsGetRequest
+required:
+  - count
+  - country_codes
+  - offset
+type: object
+properties:
+  client_id:
+    type: string
+    description: >-
+      Your Plaid API `client_id`. The `client_id` is required and may be
+      provided either in the `PLAID-CLIENT-ID` header or as part of a request
+      body.
+    default: 5fd43aad1186c30013d6f3e2
+  secret:
+    type: string
+    description: >-
+      Your Plaid API `secret`. The `secret` is required and may be provided
+      either in the `PLAID-SECRET` header or as part of a request body.
+  count:
+    maximum: 500
+    type: integer
+    description: The total number of Institutions to return.
+  offset:
+    type: integer
+    description: The number of Institutions to skip.
+  country_codes:
+    minItems: 1
+    type: array
+    description: >-
+      Specify an array of Plaid-supported country codes this institution
+      supports, using the ISO-3166-1 alpha-2 country code standard. 
+
+
+      In API versions 2019-05-29 and earlier, the `country_codes` parameter is
+      an optional parameter within the `options` object and will default to
+      `[US]` if it is not supplied.
+    items:
+      $ref: ./CountryCode.yaml
+  options:
+    $ref: ./InstitutionsGetRequestOptions.yaml
+description: InstitutionsGetRequest defines the request schema for `/institutions/get`

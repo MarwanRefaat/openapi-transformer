@@ -1,0 +1,48 @@
+title: OverrideAccounts
+required:
+  - currency
+  - force_available_balance
+  - identity
+  - meta
+  - numbers
+  - starting_balance
+  - subtype
+  - transactions
+  - type
+type: object
+properties:
+  type:
+    $ref: ./OverrideAccountType.yaml
+  subtype:
+    $ref: ./AccountSubtype.yaml
+  starting_balance:
+    type: number
+    description: >-
+      If provided, the account will start with this amount as the current
+      balance.
+  force_available_balance:
+    type: number
+    description: >-
+      If provided, the account will always have this amount as its  available
+      balance, regardless of current balance or changes in transactions over
+      time.
+  currency:
+    type: string
+    description: >-
+      ISO-4217 currency code. If provided, the account will be denominated in
+      the given currency. Transactions will also be in this currency by default.
+  meta:
+    $ref: ./Meta.yaml
+  numbers:
+    $ref: ./Numbers.yaml
+  transactions:
+    type: array
+    description: Specify the list of transactions on the account.
+    items:
+      $ref: ./TransactionOverride.yaml
+  identity:
+    $ref: ./OwnerOverride.yaml
+description: >-
+  Data to use to set values of test accounts. Some values cannot be specified in
+  the schema and will instead will be calculated from other test data in order
+  to achieve more consistent, realistic test data.
